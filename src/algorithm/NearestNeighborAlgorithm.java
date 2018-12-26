@@ -230,6 +230,37 @@ public abstract class NearestNeighborAlgorithm {
     }
 
     /**
+     * Generic package-private method to find a node with given point in the list
+     * @param nodes List of nodes to search
+     * @param point The point value to search for
+     * @return Node node if found, otherwise null
+     */
+    Node findNodeByPoint(ArrayList<Node> nodes, int point) {
+        for(Node node : nodes) {
+            if(node.getPoint() == point) {
+                return node;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Generic package-private method to find a node with the given flag and distance in the list
+     * @param nodes List of nodes to search
+     * @param flag The flag value to search for
+     * @param distance The distance value to search for
+     * @return Node node if found, otherwise null
+     */
+    Node findNodeByFlagAndDistance(ArrayList<Node> nodes, String flag, int distance) {
+        for(Node node : nodes) {
+            if(node.getDistance() == distance && node.getFlag().equals(flag)) {
+                return node;
+            }
+        }
+        return null;
+    }
+
+    /**
      * Node is a data structure for the algorithm problem.
      * Node is each point on the circuit board and it encapsulates other information
      * about the point that the program may need such as distance and flag.

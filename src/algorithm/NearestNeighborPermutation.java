@@ -31,9 +31,7 @@ public class NearestNeighborPermutation extends NearestNeighborAlgorithm {
     }
 
     private void solve() {
-        int initialPointIndex = nodesToVisit.indexOf(new Node(initialPoint));
-        Node initialNode = nodesToVisit.get(initialPointIndex);
-
+        Node initialNode = findNodeByPoint(nodesToVisit, initialPoint);
         int shortestDistance = Integer.MAX_VALUE;
 
         Path initialPath = new Path();
