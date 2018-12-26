@@ -21,3 +21,17 @@ Output: What is the shortest cycle tour that visits each point in the set S?
 
 NearestNeighborAlgorithm class is an abstract class that will be extended by
 an actual algorithm.
+
+## Sample Input
+Lowest Point: -21
+Highest Point: 11
+Initial Point: 0
+Points To Visit:
+-21 -5 -1 0 1 3 11
+
+## Sample Output
+The heuristic algorithm returned the following path:
+0 -1 1 3 -5 -21 11 0
+
+The permutation algorithm returned the following path:
+0 -1 -5 -21 11 3 1 0
