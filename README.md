@@ -16,11 +16,10 @@ fixed speed, so the time to travel between two points is proportional to their d
 In short, we must solve the following algorithm problem:
 
 Problem: Robot Tour Optimization
-Input: A set S of n points in the plane
-Output: What is the shortest cycle tour that visits each point in the set S?
 
-NearestNeighborAlgorithm class is an abstract class that will be extended by
-an actual algorithm.
+Input: A set S of n points in the plane
+
+Output: What is the shortest cycle tour that visits each point in the set S?
 
 ## Sample Input
 Lowest Point: -21
