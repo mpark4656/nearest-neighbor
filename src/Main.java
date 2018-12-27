@@ -35,7 +35,7 @@ public class Main {
         int lowest = -21;
         int highest = 11;
         int initialPoint = 0;
-        int[] points = {-21, -5, -1, 0, 1, 3, 11};
+        int[] points = {-21, -11, -6, -5, -1, 0, 1, 5, 7, 11};
 
         // Instantiate NearestNeighborHeuristic and NearestNeighborPermutation
         NearestNeighborAlgorithm heuristicAlgorithm =
@@ -59,11 +59,13 @@ public class Main {
             // Display the result of the heuristic algorithm
             System.out.println("The heuristic algorithm returned the following path:");
             System.out.println(heuristicAlgorithm.getSolution());
+            System.out.println("Execution Time: " + heuristicAlgorithm.getExecutionTime() + "ms");
             System.out.println();
 
             // Display the result of the permutation algorithm
             System.out.println("The permutation algorithm returned the following path:");
             System.out.println(permutationAlgorithm.getSolution());
+            System.out.println("Execution Time: " + permutationAlgorithm.getExecutionTime() + "ms");
             System.out.println();
         }
     }

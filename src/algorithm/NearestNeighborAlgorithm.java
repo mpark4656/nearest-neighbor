@@ -33,6 +33,7 @@ public abstract class NearestNeighborAlgorithm {
      * initialPoint: The first contact point of the robot arm
      * lowest: The lowest boundary on the circuit board.
      * highest: The highest boundary on the circuit board
+     * executionTime: Algorithm Execution Time in milliseconds
      *
      * Note: There is no actual boundary on the circuit board as the path is circular.
      * So the lowest and highest are only logical boundaries. If you move 1 back from
@@ -56,6 +57,7 @@ public abstract class NearestNeighborAlgorithm {
     int lowest;
     int highest;
     ArrayList<Node> nodesToVisit = null;
+    long executionTime = 0;
 
     /**
      * Private Member Variables
@@ -66,6 +68,7 @@ public abstract class NearestNeighborAlgorithm {
      */
     private boolean hasError = true;
     private String errorMessage = "";
+
 
     /**
      * Constructor
@@ -160,6 +163,14 @@ public abstract class NearestNeighborAlgorithm {
      */
     public String getErrorMessage() {
         return errorMessage;
+    }
+
+    /**
+     * Public get method to get the execution time in milliseconds
+     * @return long execution time in milliseconds
+     */
+    public long getExecutionTime() {
+        return executionTime;
     }
 
     /**
@@ -297,6 +308,16 @@ public abstract class NearestNeighborAlgorithm {
             this.point = point;
             this.flag = flag;
             this.distance = 0;
+        }
+
+        /**
+         * Copy Constructor
+         * @param node Node node to copy
+         */
+        Node(Node node) {
+            this.point = node.point;
+            this.flag = node.flag;
+            this.distance = node.distance;
         }
 
         /**

@@ -36,6 +36,10 @@ The heuristic algorithm returned the following path:
 
 0 -1 1 3 -5 -21 11 0
 
+Execution Time: 0ms
+
 The permutation algorithm returned the following path:
 
 0 -1 -5 -21 11 3 1 0
+
+Execution Time: 10ms

@@ -68,6 +68,8 @@ public class NearestNeighborHeuristic extends NearestNeighborAlgorithm {
      *  Method to solve the problem and add visited nodes to visitedNodes array list
      */
     private void solve() {
+        final long startTime = System.currentTimeMillis();
+
         // Find the initial node in the nodesToVisit list
         Node initialNode = findNodeByPoint(nodesToVisit, initialPoint);
 
@@ -114,5 +116,8 @@ public class NearestNeighborHeuristic extends NearestNeighborAlgorithm {
 
         // Return to the initial node
         visitedNodes.add(initialNode);
+
+        final long endTime = System.currentTimeMillis();
+        executionTime = endTime - startTime;
     }
 }
